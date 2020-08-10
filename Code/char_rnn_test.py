@@ -10,7 +10,7 @@ from sklearn.metrics import f1_score
 import tensorflow as tf
 tf.compat.v1.disable_eager_execution()
 
-#Masterdir = '/media/ameya/Research/Sub-word-LSTM/'
+
 Masterdir = 'C:/Users/smit2/OneDrive/Desktop/Sub-word-LSTM-master/'
 Datadir = 'Data/'
 Modeldir = 'Pretrained_models/'

@@ -1,4 +1,4 @@
-#Author: Ameya Prabhu
+
 import scipy.io
 import h5py
 import pickle
@@ -26,7 +26,7 @@ def get_activations(model, layer, X_batch):
 	return activations
 
 experiment_details = 'lstm128_subword'
-#Masterdir = '/media/ameya/Research/Sub-word-LSTM/'
+
 Masterdir = 'C:/Users/smit2/OneDrive/Desktop/Sub-word-LSTM-master/'
 Datadir = 'Data/'
 #Modeldir = 'Models/'

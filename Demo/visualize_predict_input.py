@@ -12,7 +12,7 @@ from keras.preprocessing import sequence
 #from skimage import io
 import matplotlib.pyplot as plt
 
-#Masterdir = '/media/ameya/Research/Sub-word-LSTM/'
+
 Masterdir = 'C:/Users/smit2/OneDrive/Desktop/Sub-word-LSTM-master/'
 Datadir = 'Data/'
 Modeldir = 'Pretrained_models/'
