@@ -3,7 +3,7 @@ import json
 from pymongo import MongoClient
 
 path = "C:\\Users\\smit2\\Downloads\\Data\\UScomments.csv"
-df = pd.read_csv( path, names = ['id','comment', 'likes','replies'])
+df = pd.read_csv( path, names = ['id','comment', 'likes','replies'], low_memory=True)
 df.head()
 
 df = df.iloc[1:]
@@ -29,5 +29,14 @@ records = json.loads(df.T.to_json()).values()
 comment_collection.insert_many(records)
 
 
-result = db.comments.find_one()
-print(result['comment'])
+f = open("C:/Users/smit2/OneDrive/Desktop/Sub-word-LSTM-master/Data/data.txt", "a", encoding = 'UTF-8')
+
+count = 0
+for x in db.comments.find():
+    print(x['comment'])
+    f.write(x['comment'])
+    f.write("\n")
+    count = count + 1
+    if(count > 10):
+        break
+f.close()
